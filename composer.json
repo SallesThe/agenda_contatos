@@ -1,0 +1,19 @@
+{
+    "name": "manod/agenda_de_contatos",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Vendor\\": "Vendor/MF"
+        }
+    },
+    "authors": [
+        {
+            "name": "SallesThe",
+            "email": "manodada26@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">= 7.0"
+    }
+}
