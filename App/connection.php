@@ -6,7 +6,7 @@
             $this->Connect();
         }
         
-        public function Connect(): void
+        protected function Connect(): void
         {
             try {
                 $conn = new \PDO('mysql:host=localhost;dbname=agenda_contatos', 'root', '');
