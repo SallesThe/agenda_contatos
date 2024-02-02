@@ -21,7 +21,7 @@
             return $this->route = $route;
         }
 
-        protected function run(Object $requestURI)
+        public function run($requestURI)
         {
             foreach ($this->getRoutes() as $path => $route) 
             {
