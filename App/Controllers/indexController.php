@@ -1,6 +1,11 @@
 <?php 
     namespace App\Controllers;
-    class indexController
+    use MF\Controller\Action;
+
+    class indexController extends Action
     {
-        
+        public function showIndex() 
+        {
+            $this->render('home');
+        }
     }

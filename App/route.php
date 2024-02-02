@@ -6,12 +6,12 @@
     {
         public function initRoutes(): void
         {
-            $route = array(
-                "route" => "/",
-                "controller" => "indexController",
-                "action" => "index",
+            $routes['index'] = array(
+                "Route" => "/",
+                "Controller" => "indexController",
+                "Action" => "showIndex",
             );
 
-            $this->setRoutes($route);
+            $this->setRoutes($routes);
         }
     }

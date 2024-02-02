@@ -25,17 +25,17 @@
         {
             foreach ($this->getRoutes() as $path => $route) 
             {
-               if($requestURI == $route['route'])
+               if($requestURI == $route['Route'])
                {
-                    $class = "App\\Controller\\" . $route['Controller'];
+                    $class = "App\\Controllers\\" . $route['Controller'];
                     $controller = new $class;
-                    $action = $route['action'];
+                    $action = $route['Action'];
                     $controller->$action();
                }
             }
         }
 
-        protected function requestURI(): Mixed
+        public function requestURI(): String
         {
            return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH); 
         }
