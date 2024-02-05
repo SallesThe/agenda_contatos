@@ -9,12 +9,13 @@
             $this->view = new \stdClass;    
         }
 
-        protected function render($view, $layout = "layout_01")
+        protected function render($view, $layout = "layout_default")
         {
             $this->view->page = $view;
-            if(file_exists("../App/View" . $layout . "phtml"))
+
+            if(file_exists("../App/Views/" . $layout . ".phtml"))
             {
-                require_once "../App/View/" . $layout . "phtml";
+                require_once "../App/Views/" . $layout . ".phtml";
             } else {
                 $this->content();
             }
