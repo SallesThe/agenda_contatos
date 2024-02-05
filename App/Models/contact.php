@@ -1,8 +1,7 @@
 <?php 
     namespace App\Models;
-
-use MF\Model\Container;
-use MF\Model\Model;
+    use MF\Model\Model;
+use PDO;
 
     class Contact extends Model
     {
@@ -18,7 +17,12 @@ use MF\Model\Model;
 
         public function salvar(): void
         {
-            $query = "INSERT INTO tb_conta";
+            $query = "INSERT INTO tb_conta(name, email, tel) VALUES (:name, :email, :tel)";
+            $stmt = $this->database->prepare($query);
+            $stmt->bindParam(':name', $this->__get('name'));
+            $stmt->bindParam(':email', $this->__get('email'));
+            $stmt->bindParam(':tel', $this->__get('tel'));
+            $stmt->execute();
         }
 
         
