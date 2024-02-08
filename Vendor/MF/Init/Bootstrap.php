@@ -1,5 +1,6 @@
 <?php 
     namespace MF\Init;
+    
     abstract class Bootstrap
     {
         protected $route;

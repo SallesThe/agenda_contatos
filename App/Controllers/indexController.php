@@ -1,9 +1,8 @@
 <?php 
     namespace App\Controllers;
 
-use App\Models\Contact;
-use MF\Controller\Action;
-use MF\Model\Container;
+    use MF\Controller\Action;
+    use MF\Model\Container;
 
     class indexController extends Action
     {

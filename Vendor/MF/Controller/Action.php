@@ -1,5 +1,6 @@
 <?php 
     namespace MF\Controller;
+    
     abstract class Action
     {
         protected $view;
