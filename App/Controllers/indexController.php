@@ -13,9 +13,11 @@
 
         public function registerContact()
         {
-            $model = Container::getModel('contact');
-            $model->__set('name', $_POST['name']);
-            $model->__set('name', $_POST['name']);
-            $model->__set('name', $_POST['name']);
+            $contact = Container::getModel('contact');
+            $contact->__set('name', $_POST['name']);
+            $contact->__set('address', $_POST['address']);
+            $contact->__set('tel', $_POST['tel']);
+            $contact->__set('email', $_POST['email']);
+            $contact->save();
         }
     }

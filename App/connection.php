@@ -7,11 +7,11 @@
             $this->Connect();
         }
         
-        public static function Connect(): void
+        public static function Connect(): \PDO
         {
             try {
                 $conn = new \PDO('mysql:host=localhost;dbname=agenda_contatos', 'root', '');
-                echo "Connection Successful";
+                return $conn;
             } catch (\PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }

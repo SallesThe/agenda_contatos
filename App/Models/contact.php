@@ -4,26 +4,24 @@
 
     class Contact extends Model
     {
-        public function __set($attribute, $value)
-        {
-            $this->attributte = $value;
-        }
-
         public function __get($attribute)
         {
             return $this->attribute;
         }
 
-        public function salvar(): void
+        public function __set($attribute, $value)
         {
-            $query = "INSERT INTO tb_conta(name, email, tel) VALUES (:name, :email, :tel)";
-            $stmt = $this->database->prepare($query);
-            $stmt->bindParam(':name', $this->__get('name'));
-            $stmt->bindParam(':email', $this->__get('email'));
-            $stmt->bindParam(':tel', $this->__get('tel'));
-            $stmt->execute();
+            $this->attribute = $value;
         }
 
-        
-        
+        public function save()
+        {
+            $query = "INSERT INTO tb_contact(name, email, tel, address) VALUES (:name, :email, :tel, :address)";
+            $stmt = $this->database->prepare($query);
+            $stmt->bindValue(':name', $this->__get('name'));
+            $stmt->bindValue(':email', $this->__get('email'));
+            $stmt->bindValue(':tel', $this->__get('tel'));
+            $stmt->bindValue(':address', $this->__get('address'));
+            $stmt->execute();
+        }        
     }

@@ -12,6 +12,12 @@
                 "Action" => "showIndex",
             );
 
+            $routes['registerContact'] = array(
+                "Route" => "/registerContact",
+                "Controller" => "indexController",
+                "Action" => "registerContact",
+            );
+
             $this->setRoutes($routes);
         }
     }

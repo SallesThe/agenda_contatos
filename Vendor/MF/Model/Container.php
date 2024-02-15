@@ -4,7 +4,7 @@
 
     class Container
     {
-        public static function getModel(String $model): Object
+        public static function getModel($model)
         {
             $class = "App\\Models\\" . ucfirst($model);
             $conn = Connection::Connect();

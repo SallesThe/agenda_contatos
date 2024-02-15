@@ -37,7 +37,7 @@
         </table>
     </section>
 
-    <!-- Modal -->
+    <!-- Modal Adicionar -->
     <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -49,31 +49,37 @@
                     <form action="/registerContact" method="post">
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
+                            <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Nome">
                             <label for="floatingInput">Nome</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingPassword" placeholder="name@example.com">
+                            <input type="email" name="email" class="form-control" id="floatingPassword" placeholder="name@example.com">
                             <label for="floatingPassword">Email</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="floatingPassword" placeholder="Telefone">
+                            <input type="tel" name="tel" class="form-control" id="floatingPassword" placeholder="Telefone">
                             <label for="floatingPassword">Telefone</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingPassword" placeholder="Endereço">
+                            <input type="text" name="address" class="form-control" id="floatingPassword" placeholder="Endereço">
                             <label for="floatingPassword">Endereço</label>
                         </div>
-                        <button type="submit" class="btn btn-success">Adicionar</button>
+
+                        <hr>
+
+                        <div class="submit">
+                            <button type="submit" class="btn btn-success">Adicionar</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Modal Editar -->
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -82,7 +88,14 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/registerContact" method="post">
+                    <form action="/#" method="post">
+
+                        <select class="form-select mb-3" aria-label="Default select example">
+                            <option selected>Selecionar</option>
+                            <option value="1">Pessoa 1</option>
+                            <option value="2">Pessoa 2</option>
+                            <option value="3">Pessoa 3</option>
+                        </select>
 
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="Nome">
@@ -103,10 +116,41 @@
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Endereço">
                             <label for="floatingPassword">Endereço</label>
                         </div>
-                        <button type="submit" class="btn btn-success">Adicionar</button>
+                        <hr>
+                        <div class="submit">
+                            <button type="submit" class="btn btn-success">Editar</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal Deletar -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="deleteModalLabel">Adicionar Contato</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/#" method="post">
+
+                        <select class="form-select mb-3" aria-label="Default select example">
+                            <option selected>Selecionar</option>
+                            <option value="1">Pessoa 1</option>
+                            <option value="2">Pessoa 2</option>
+                            <option value="3">Pessoa 3</option>
+                        </select>
+                        <hr>
+                        <div class="submit">
+                            <button type="submit" class="btn btn-danger">Deletar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
