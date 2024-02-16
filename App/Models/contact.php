@@ -16,12 +16,12 @@
 
         public function save()
         {
-            $query = "INSERT INTO tb_contact(name, email, tel, address) VALUES (:name, :email, :tel, :address)";
+            $query = "INSERT INTO (name, address, tel, email) VALUES(:name, :address, :tel, :email)";
             $stmt = $this->database->prepare($query);
             $stmt->bindValue(':name', $this->__get('name'));
-            $stmt->bindValue(':email', $this->__get('email'));
-            $stmt->bindValue(':tel', $this->__get('tel'));
             $stmt->bindValue(':address', $this->__get('address'));
+            $stmt->bindValue(':tel', $this->__get('tel'));
+            $stmt->bindValue(':email', $this->__get('email'));
             $stmt->execute();
         }        
     }
