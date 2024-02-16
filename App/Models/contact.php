@@ -18,7 +18,7 @@
 
         public function save()
         {
-            $query = "INSERT INTO (name, address, tel, email) VALUES(:name, :address, :tel, :email)";
+            $query = "INSERT INTO tb_contact (name, address, tel, email) VALUES (:name, :address, :tel, :email)";
             $stmt = $this->database->prepare($query);
             $stmt->bindValue(':name', $this->__get('name'));
             $stmt->bindValue(':address', $this->__get('address'));

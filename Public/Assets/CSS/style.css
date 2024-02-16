@@ -14,8 +14,8 @@ body {
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
-    width: 70em;
-    height: 50em;
+    width: 60em;
+    height: 40em;
     background-color: #2E2E3A;
 }
 
@@ -62,7 +62,7 @@ body {
 .list td {
     padding: 8px;
     border: 1px solid #E0A890;
-    text-align: left;
+    text-align: center;
 }
 
 .list tr {
