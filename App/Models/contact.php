@@ -2,16 +2,18 @@
     namespace App\Models;
     use MF\Model\Model;
 
-    class Contact extends Model
+    class Contact extends Model 
     {
+        protected $attribute = [];
+
         public function __get($attribute)
         {
-            return $this->attribute;
+            return isset($this->attribute[$attribute]) ? $this->attribute[$attribute] : null; ;
         }
 
         public function __set($attribute, $value)
         {
-            $this->attribute = $value;
+            $this->attribute[$attribute] = $value;
         }
 
         public function save()
