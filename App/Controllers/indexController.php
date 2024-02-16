@@ -19,5 +19,7 @@
             $contact->__set('tel', $_POST['tel']);
             $contact->__set('email', $_POST['email']);
             $contact->save();
+
+            $this->render('home');
         }
     }
